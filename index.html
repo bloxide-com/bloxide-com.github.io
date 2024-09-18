@@ -1,17 +1,23 @@
-<!DOCTYPE html><html><head>
-<meta charset="utf-8">
-<title>Bloxide</title>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bloxide</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/tailwind.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Kode%20Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
-
-
-
-
-<link rel="preload" href="/bloxide-dot-com-priv-f557ea7c95a166d8_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/bloxide-dot-com-priv-f557ea7c95a166d8.js"></head>
-<body><script type="module">import init from '/bloxide-dot-com-priv-f557ea7c95a166d8.js';init('/bloxide-dot-com-priv-f557ea7c95a166d8_bg.wasm');</script></body></html>
+</head>
+<body>
+  <div id="main"></div>
+  <script type="module">
+    import init from "/./assets/dioxus/bloxide_website.js";
+    init("/./assets/dioxus/bloxide_website_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  
+</body>
+</html>
