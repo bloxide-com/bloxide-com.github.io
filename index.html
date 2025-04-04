@@ -5,6 +5,19 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
+    <script type="text/javascript">
+
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   <link rel="preload" as="script" href="/./assets/website-dev-71c69c42eb969a73.js" crossorigin><link rel="preload" as="fetch" type="application/wasm" href="/./assets/website-dev_bg-3aad9933d7c34d2e.wasm" crossorigin><link rel="icon" href="/assets/favicon-26462987cb4c2337.ico"/><link rel="stylesheet" href="/assets/tailwind-3a7411233189eedb.css"/></head>
   <body>
     <div id="main"><script>window.hydrate_queue=[];window.dx_hydrate=(id,data,debug_types,debug_locations)=>{const decoded=atob(data),bytes=Uint8Array.from(decoded,(c)=>c.charCodeAt(0));if(window.hydration_callback)window.hydration_callback(id,bytes,debug_types,debug_locations);else window.hydrate_queue.push([id,bytes,debug_types,debug_locations])};
